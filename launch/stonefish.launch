@@ -1,0 +1,11 @@
+<launch>
+    <param name="~frame_id" type="string" value="world_ned" />
+    <include file="$(find turtlebot_simulation)/launch/kobuki_motion_planning.launch" />
+    <!-- <node pkg="hands_on_planning" type="plannerStonefish.py" name="turtlebot_online_path_planning_node"/> -->
+    <node pkg="hands_on_planning" type="laser_scan_to_point_cloud_node.py" name="laserscan_to_pointcloud"/>
+    <!-- <node pkg="hands_on_planning" type="deadReckoning.py" name="dead_reckoning_node"/> -->
+    <node pkg="hands_on_planning" type="plannerNode.py" name="turtlebot_online_path_planning_node"/>
+    <node pkg="hands_on_planning" type="frontier.py" name="frontier"/>
+    <node pkg="hands_on_planning" type="dead_reckoning.py" name="dead_reckoning_node"/>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap" output="screen"/>
+</launch>
