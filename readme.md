@@ -36,7 +36,7 @@ All the rostopic is seted for stonefish simulator.
 
 Please go to this for video `https://youtu.be/pkE6xhLc7Oo?si=DxJTnHIL2tj6G9-n`
 
-### Thank you. 
+### Thank you!
 
 
 
